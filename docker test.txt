@@ -1,0 +1,85 @@
+C:\Users\Data\source\repos\WebApplication2\WebApplication2                                                                                                              
+λ docker build -t razorapp .                                                                                                                                            
+[+] Building 513.1s (14/15)                                                                                                                        docker:desktop-linux 
+ => [internal] load build definition from Dockerfile                                                                                                               0.1s 
+ => => transferring dockerfile: 456B                                                                                                                               0.1s 
+ => [internal] load metadata for mcr.microsoft.com/dotnet/sdk:10.0                                                                                                 2.7s 
+ => [internal] load metadata for mcr.microsoft.com/dotnet/aspnet:10.0                                                                                              2.7s 
+ => [internal] load .dockerignore                                                                                                                                  0.0s 
+ => => transferring context: 2B                                                                                                                                    0.0s 
+ => [build 1/6] FROM mcr.microsoft.com/dotnet/sdk:10.0@sha256:0a506ab0c8aa077361af42f82569d364ab1b8741e967955d883e3f23683d473a                                   505.5s 
+ => => resolve mcr.microsoft.com/dotnet/sdk:10.0@sha256:0a506ab0c8aa077361af42f82569d364ab1b8741e967955d883e3f23683d473a                                           0.1s 
+ => => sha256:198bb7165c4e9657a95d7948693f18f340510bf40028022ba329058a83fd98ce 17.60MB / 17.60MB                                                                  79.7s 
+ => => sha256:96d68fe10fd2911fcb83cc482620f6b7a1886a770ae0cda60d3680af33f3acb9 472B / 472B                                                                         3.4s 
+ => => sha256:7d830fe8a4931f40ef64c94497494523fdaa9fb1329598a845d59684c3ba8dd2 189.57MB / 189.57MB                                                               409.0s 
+ => => sha256:49353ec27a3587d0b8f8c46dac1522d5f5a6b535f1a1c044eb244e044f8c58cc 23.60MB / 23.60MB                                                                  70.0s 
+ => => extracting sha256:49353ec27a3587d0b8f8c46dac1522d5f5a6b535f1a1c044eb244e044f8c58cc                                                                          1.2s 
+ => => extracting sha256:7d830fe8a4931f40ef64c94497494523fdaa9fb1329598a845d59684c3ba8dd2                                                                          4.4s 
+ => => extracting sha256:96d68fe10fd2911fcb83cc482620f6b7a1886a770ae0cda60d3680af33f3acb9                                                                          0.0s 
+ => => extracting sha256:198bb7165c4e9657a95d7948693f18f340510bf40028022ba329058a83fd98ce                                                                          0.5s 
+ => [internal] load build context                                                                                                                                  4.5s 
+ => => transferring context: 13.51MB                                                                                                                               4.4s 
+ => [base 1/2] FROM mcr.microsoft.com/dotnet/aspnet:10.0@sha256:52dcfb4225fda614c38ba5997a4ec72cbd5260a624125174416e547ff9eb9b8c                                 159.9s 
+ => => resolve mcr.microsoft.com/dotnet/aspnet:10.0@sha256:52dcfb4225fda614c38ba5997a4ec72cbd5260a624125174416e547ff9eb9b8c                                        0.1s 
+ => => sha256:53857c53a381460669f548fb44fc8e4c9a06391f49ac3982a36139a524a12e33 154B / 154B                                                                         0.4s 
+ => => sha256:40be876054b9750b84d32b4728d10780c3d5dcb400cd425aead4511e51f4e08b 12.76MB / 12.76MB                                                                  58.9s 
+ => => sha256:2ec1f654a8d3efb52bf5cf767a80d4229047b87f21026845e603d9604d0675b5 36.62MB / 36.62MB                                                                 158.3s 
+ => => sha256:dd2509e04e5405d935a8a8a381b42becf6519996090b1916bda154d1fbfe3ecd 3.53kB / 3.53kB                                                                     2.1s 
+ => => sha256:f5adb485db002b82d36210585da6fd7449bcb4ba207a52f6681fa6b6034e8b12 16.82MB / 16.82MB                                                                  87.3s 
+ => => sha256:01d7766a2e4a62b74e0bebf2cd12c47e675e9221174f6570854203e84ffe68b0 29.73MB / 29.73MB                                                                 133.4s 
+ => => extracting sha256:01d7766a2e4a62b74e0bebf2cd12c47e675e9221174f6570854203e84ffe68b0                                                                          1.4s 
+ => => extracting sha256:f5adb485db002b82d36210585da6fd7449bcb4ba207a52f6681fa6b6034e8b12                                                                          0.7s 
+ => => extracting sha256:dd2509e04e5405d935a8a8a381b42becf6519996090b1916bda154d1fbfe3ecd                                                                          0.0s 
+ => => extracting sha256:2ec1f654a8d3efb52bf5cf767a80d4229047b87f21026845e603d9604d0675b5                                                                          0.6s 
+ => => extracting sha256:53857c53a381460669f548fb44fc8e4c9a06391f49ac3982a36139a524a12e33                                                                          0.0s 
+ => => extracting sha256:40be876054b9750b84d32b4728d10780c3d5dcb400cd425aead4511e51f4e08b                                                                          0.2s 
+ => [base 2/2] WORKDIR /app                                                                                                                                        0.7s 
+ => [final 1/2] WORKDIR /app                                                                                                                                       0.0s 
+ => [build 2/6] WORKDIR /src                                                                                                                                       1.3s 
+ => [build 3/6] COPY *.csproj .                                                                                                                                    0.1s 
+ => [build 4/6] RUN dotnet restore                                                                                                                                 1.8s 
+ => [build 5/6] COPY . .                                                                                                                                           0.1s 
+ => ERROR [build 6/6] RUN dotnet publish -c Release -o /app/publish --no-restore                                                                                   1.4s 
+------                                                                                                                                                                  
+ > [build 6/6] RUN dotnet publish -c Release -o /app/publish --no-restore:                                                                                              
+0.738 /usr/share/dotnet/sdk/10.0.103/Current/SolutionFile/ImportAfter/Microsoft.NET.Sdk.Solution.targets(36,5): warning NETSDK1194: The "--output" option isn't supporte
+d when building a solution. Specifying a solution-level output path results in all projects copying outputs to the same directory, which can lead to inconsistent builds
+. [/src/WebApplication2.sln]                                                                                                                                            
+1.264 /usr/share/dotnet/sdk/10.0.103/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018: The "ResolvePackageAssets" task
+ failed unexpectedly. [/src/WebApplication2.csproj]                                                                                                                     
+1.264 /usr/share/dotnet/sdk/10.0.103/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018: NuGet.Packaging.Core.PackagingE
+xception: Unable to find fallback package folder 'C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages'. [/src/WebApplication2.csproj]                   
+1.264 /usr/share/dotnet/sdk/10.0.103/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at NuGet.Packaging.FallbackP
+ackagePathResolver..ctor(String userPackageFolder, IEnumerable`1 fallbackPackageFolders) [/src/WebApplication2.csproj]                                                  
+1.264 /usr/share/dotnet/sdk/10.0.103/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.NET.Build.Tasks
+.NuGetPackageResolver.CreateResolver(IEnumerable`1 packageFolders) [/src/WebApplication2.csproj]                                                                        
+1.264 /usr/share/dotnet/sdk/10.0.103/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.NET.Build.Tasks
+.ResolvePackageAssets.CacheWriter..ctor(ResolvePackageAssets task) [/src/WebApplication2.csproj]                                                                        
+1.264 /usr/share/dotnet/sdk/10.0.103/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.NET.Build.Tasks
+.ResolvePackageAssets.CacheReader.CreateReaderFromDisk(ResolvePackageAssets task, Byte[] settingsHash) [/src/WebApplication2.csproj]                                    
+1.264 /usr/share/dotnet/sdk/10.0.103/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.NET.Build.Tasks
+.ResolvePackageAssets.CacheReader..ctor(ResolvePackageAssets task) [/src/WebApplication2.csproj]                                                                        
+1.264 /usr/share/dotnet/sdk/10.0.103/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.NET.Build.Tasks
+.ResolvePackageAssets.ReadItemGroups() [/src/WebApplication2.csproj]                                                                                                    
+1.264 /usr/share/dotnet/sdk/10.0.103/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.NET.Build.Tasks
+.ResolvePackageAssets.ExecuteCore() [/src/WebApplication2.csproj]                                                                                                       
+1.264 /usr/share/dotnet/sdk/10.0.103/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.NET.Build.Tasks
+.TaskBase.Execute() [/src/WebApplication2.csproj]                                                                                                                       
+1.264 /usr/share/dotnet/sdk/10.0.103/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.Build.BackEnd.T
+askExecutionHost.Execute() [/src/WebApplication2.csproj]                                                                                                                
+1.264 /usr/share/dotnet/sdk/10.0.103/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets(266,5): error MSB4018:    at Microsoft.Build.BackEnd.T
+askBuilder.ExecuteInstantiatedTask(TaskExecutionHost taskExecutionHost, TaskLoggingContext taskLoggingContext, TaskHost taskHost, ItemBucket bucket, TaskExecutionMode h
+owToExecuteTask) [/src/WebApplication2.csproj]                                                                                                                          
+------                                                                                                                                                                  
+Dockerfile:14                                                                                                                                                           
+--------------------                                                                                                                                                    
+  12 |                                                                                                                                                                  
+  13 |     COPY . .                                                                                                                                                     
+  14 | >>> RUN dotnet publish -c Release -o /app/publish --no-restore                                                                                                   
+  15 |                                                                                                                                                                  
+  16 |     # Final image                                                                                                                                                
+--------------------                                                                                                                                                    
+ERROR: failed to build: failed to solve: process "/bin/sh -c dotnet publish -c Release -o /app/publish --no-restore" did not complete successfully: exit code: 1        
+                                                                                                                                                                        
+C:\Users\Data\source\repos\WebApplication2\WebApplication2                                                                                                              
+λ                                                                                                                                                                       
